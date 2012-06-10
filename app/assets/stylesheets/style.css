@@ -1,0 +1,139 @@
+*{margin:0}
+body{
+	background-color: #FFF;
+	
+}
+header{
+	/*background:rgba(94,218,33,.3);*/
+	background-image: linear-gradient(bottom, rgb(255,255,255) 10%, rgb(237,171,57) 55%, rgb(255,162,31) 78%);
+	background-image: -o-linear-gradient(bottom, rgb(255,255,255) 10%, rgb(237,171,57) 55%, rgb(255,162,31) 78%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 10%, rgb(237,171,57) 55%, rgb(255,162,31) 78%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 10%, rgb(237,171,57) 55%, rgb(255,162,31) 78%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 10%, rgb(237,171,57) 55%, rgb(255,162,31) 78%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.1, rgb(255,255,255)),
+	color-stop(0.55, rgb(237,171,57)),
+	color-stop(0.78, rgb(255,162,31)));
+	display: inline-block;
+	width:100%;
+}
+nav{	
+	width:99%;
+}
+nav ul{
+	font-size:0;
+	padding: 0;	
+}
+nav ul li{
+	/*background:rgba(0,0,0,.7);*/
+	background-image: linear-gradient(left top, rgb(255,255,255) 0%, rgb(61,139,235) 0%, rgb(255,255,255) 100%);
+	background-image: -o-linear-gradient(left top, rgb(255,255,255) 0%, rgb(61,139,235) 0%, rgb(255,255,255) 100%);
+	background-image: -moz-linear-gradient(left top, rgb(255,255,255) 0%, rgb(61,139,235) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient(left top, rgb(255,255,255) 0%, rgb(61,139,235) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient(left top, rgb(255,255,255) 0%, rgb(61,139,235) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	right bottom,
+	color-stop(0, rgb(255,255,255)),
+	color-stop(0, rgb(61,139,235)),
+	color-stop(1, rgb(255,255,255)));
+	border-radius:4px;
+	display: inline-block;
+	font-size:12px;
+	height:15px;
+	line-height:15px;
+	margin:0px 5px 0px;
+	padding:10px 20px;
+	vertical-align: top;
+	width:10%;		
+}
+nav ul li a{
+	color: #30F;
+	display: block;
+	font-weight:bold;
+	text-align:center;
+	text-decoration:none;
+	text-transform:uppercase;	
+}
+nav ul li:hover{
+	background-image: linear-gradient(left top, rgb(255,255,255) 0%, rgb(127,166,224) 0%, rgb(255,255,255) 100%);
+	background-image: -o-linear-gradient(left top, rgb(255,255,255) 0%, rgb(127,166,224) 0%, rgb(255,255,255) 100%);
+	background-image: -moz-linear-gradient(left top, rgb(255,255,255) 0%, rgb(127,166,224) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient(left top, rgb(255,255,255) 0%, rgb(127,166,224) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient(left top, rgb(255,255,255) 0%, rgb(127,166,224) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left top,
+	right bottom,
+	color-stop(0, rgb(255,255,255)),
+	color-stop(0, rgb(127,166,224)),
+	color-stop(1, rgb(255,255,255)));
+}
+nav ul li a:hover{
+	color:#009;
+}
+#pie{
+	
+	background-image: linear-gradient(bottom, rgb(255,142,3) 10%, rgb(237,171,57) 55%, rgb(255,255,255) 78%);
+	background-image: -o-linear-gradient(bottom, rgb(255,142,3) 10%, rgb(237,171,57) 55%, rgb(255,255,255) 78%);
+	background-image: -moz-linear-gradient(bottom, rgb(255,142,3) 10%, rgb(237,171,57) 55%, rgb(255,255,255) 78%);
+	background-image: -webkit-linear-gradient(bottom, rgb(255,142,3) 10%, rgb(237,171,57) 55%, rgb(255,255,255) 78%);
+	background-image: -ms-linear-gradient(bottom, rgb(255,142,3) 10%, rgb(237,171,57) 55%, rgb(255,255,255) 78%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.1, rgb(255,142,3)),
+	color-stop(0.55, rgb(237,171,57)),
+	color-stop(0.78, rgb(255,255,255))
+);
+	margin:-20px 0px 0px 0px;
+	width:100%
+	}
+#todo{
+	background:#FFF	;
+	width:95%;
+	margin: 0px auto;
+	
+}
+/*#conten1{
+	/*display: inline-block;
+	background:#FFF;
+	/*width:99.7%;
+	border:#F60 solid 1px;
+}*/
+#login{
+	margin:10px 0px 0px 100px;
+	padding: 0px 20px;
+	width:33%;
+}
+#titulo h1{
+	margin: 35px auto 0px;
+	text-shadow: 2px 5px 2px rgba(255,255,255,.9);
+}
+#logo{
+	margin: 20px;	
+}
+#logo,#titulo,#login{
+	float:left;
+}
+/*#mapa{
+	border:solid black;
+	width:45%;
+}
+/*#slide,#mapa{
+	float: left;
+}*/
+.label{
+	/*background: rgba(0,0,0,1);*/
+	border-top-right-radius: 100px 100px;
+	color: #36F;
+	width:100px;
+}
+.input{
+	border:#36F solid 2px;		
+}

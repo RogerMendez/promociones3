@@ -1,0 +1,23 @@
+<div id="loginmain">
+
+	<%= form_tag sessions_path do %>
+	<table>
+		<tr>
+			<td><%= label_tag :Correo_electrónico %></td><td><%= label_tag :Contraseña %></td>
+		</tr>
+		<tr>
+			<td> <%= text_field_tag :email, params[:email], :placeholder => "ejemplo@hotmail.com", :required => "true", :type => "email", :autofocus => "true"    %> </td><td> <%= password_field_tag :password  %> </td>
+		<td><%= submit_tag "Entrar" %></td>
+		</tr>
+		<tr>
+			<td >
+			
+				<%= link_to "¿No puede acceder a su cuenta?", new_password_reset_path %>
+			</td><td><%= check_box_tag :remember_me, 1, params[:remember_me] %>
+			<%= label_tag :Mantener_la_sesión_iniciada %></td>
+		</tr>
+		
+
+	</table>
+	<% end %>
+</div>

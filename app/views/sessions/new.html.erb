@@ -1,0 +1,29 @@
+
+<div id="caja2">
+	<h1 align="center">iniciar sesión</h1>
+	<hr  />
+	<%= form_tag sessions_path do %>
+	<div id="cuerpop">
+		<div class="field">
+			<%= label_tag :Correo_electrónico %>
+			<%= text_field_tag :email, params[:email], :placeholder => "ejemplo@hotmail.com", :required => "true", :type => "email", :autofocus => "true"    %>
+		</div>
+		<div class="field">
+			<%= label_tag :Contraseña %>
+			<%= password_field_tag :password  %>
+		</div>
+	<p>
+			<%= link_to "¿No puede acceder a su cuenta?", new_password_reset_path %>
+	</p>
+	</div>
+	<hr   />
+	<div class="fields">
+		<%= check_box_tag :remember_me, 1, params[:remember_me] %>
+		<%= label_tag :Mantener_la_sesión_iniciada %>
+	</div>
+	
+	<div class="actions">
+		<%= submit_tag "iniciar sesión" %>
+	</div>
+</div>
+<% end %> 

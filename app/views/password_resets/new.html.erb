@@ -1,0 +1,14 @@
+<div id="caja1">
+<h1 align="center" >Identifica tu cuenta</h1>
+<hr  width=100% align="center" color="b3dced"  />
+Para que podamos cambiar tu contraseña, identifica tu cuenta a través de una de las opciones siguientes.
+<hr />
+<%= form_tag password_resets_path, :method => :post do %>
+  <div class="field">
+  	<%= image_tag "mail.gif"%>
+    <%= label_tag :Escribe_tu_dirección_de_correo_electrónico %>
+    <%= text_field_tag :email, params[:email], :placeholder => "ejemplo@hotmail.com", :required => "true", :type => "email", :autofocus => "true"   %>
+  </div>
+  <div class="actions"><%= submit_tag "Enviar" %></div>
+<% end %>
+</div>

@@ -1,0 +1,49 @@
+<div id="caja1">
+	<h1 align="center">Crear su cuenta</h1>
+	Le ofrece acceso a todos los servicios del sistema y a otros sitios donde aparezca
+	<br />
+	Toda la información es necesaria.
+	<hr  width=90% align="center" color="b3dced"  />
+	<p></p>
+	<% flash.each do |name, msg| %>
+	<%= content_tag :div, msg, :id => "flash_#{name}" %>
+	<% end %> <p></p>
+	<%= form_for @user do |f| %>
+	<% if @user.errors.any? %>
+	<div class="error_messages">
+		<h2>Form is invalid</h2>
+		<ul>
+			<% for message in @user.errors.full_messages %>
+			<li>
+				<%= message %>
+			</li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+	<table class="formc">
+		<tr>
+			<div class="field">
+				<td > <%= f.label :email %></td>
+				<td > <%= f.text_field :email, :placeholder => "ejemplo@hotmail.com", :required => "true", :type => "email", :autofocus => "true"   %> </td>
+			
+			</div>
+		</tr>
+		<tr>
+			<div class="field">
+				<td> <%= f.label :password %></td><td> <%= f.password_field :password %> </td>
+			</div>
+		</tr>
+		<tr>
+			<div class="field">
+				<td> <%= f.label :password_confirmation %></td><td> <%= f.password_field :password_confirmation %> </td>
+			</div>
+		</tr>
+	</table>
+	<hr   />
+	Hacer clic en <strong>Acepto</strong> significa que acepta el Contrato de servicios de iRomero y la declaración de privacidad.
+	<div class="actions">
+		<%= f.submit "Acepto" %>
+	</div>
+	<% end %>
+</div>

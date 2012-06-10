@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Promociones2</title>
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag    "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+
+	<body class="<%= params[:controller] %>" background="/images/fondo.jpg">
+
+		<section id="todo">
+			<header>
+				<div id="logo">
+					<img src="/images/logo.png" widht="100" height="100">
+				</div>
+				<div id="titulo">
+					<h1>PROMOCIONES</h1>
+					<p>
+						Somos los Primeros en todo
+					</p>
+				</div>
+
+				<div id="login"  >
+
+					<% if current_user %>
+					Sesión iniciada como: <%= current_user.email %>.
+					<%= link_to "Cerrar sesión", logout_path %>
+					<% else %>
+					<div align="center">
+						<%= link_to "Regístrese", signup_path %> o
+						<%= link_to "Inicie sesión", login_path %>
+					</div><%= render "new"%>
+					<% end %>
+				</div>
+
+			</header>
+			<nav id="menu1">
+				<ul>
+					<li>
+						<a href="../home/index">INICIO</a>
+					</li>
+					<li>
+						<a href="#">Ciudad</a>
+					</li>
+					<li>
+						<a href="#">empresas</a>
+					</li>
+					<li>
+						<a href="#">configuracion</a>
+					</li>
+					<li>
+						<a href="#">slide</a>
+					</li>
+				</ul>
+			</nav>
+
+			<br />
+			<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash_#{name}" %>
+			<% end %>
+			<br />
+
+			<%= yield %>
+
+			<br />
+			<br />
+			<br />
+			<br />
+			<section id="pie">
+				<footer>
+					<center>
+
+						<span class="copyright">Copyright &copy; 2012 <a href="#">iRomero</a>, All Rights Reserved</span>
+						<p>
+							<a href="/contact/">Contactos</a>
+							| <a href="/terms.html">terminos de uso</a>
+							| <a href="/privacy.html">Privacidad</a>
+
+					</center>
+				</footer>
+			</section>
+		</section>
+	</body>
+
+</html>
